@@ -1,0 +1,23 @@
+server:
+  port: 8800
+
+spring:
+  datasource:
+    username: root
+    password: 1234
+    url: jdbc:mysql://127.0.0.1:3306/lottery?useUnicode=true
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+
+# Dubbo 广播方式配置
+dubbo:
+  application:
+    name: Lottery
+    version: 1.0.0
+    parameters:
+      unicast: false
+  protocol:
+    name: dubbo
+    port: 20880
+  consumer:
+    timeout: 6000
